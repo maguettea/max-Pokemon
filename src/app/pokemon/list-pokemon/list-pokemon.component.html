@@ -1,0 +1,35 @@
+<div class='container'>
+    <div class="row">
+        <app-search-pokemon></app-search-pokemon>
+        <div *ngFor='let pokemon of pokemonList' class="col s6 m4">
+            <div (click)="goToPokemon(pokemon)" class="card horizontal" pkmnBorderCard>
+                <div class="card-image">
+                    <img [src]="pokemon.picture">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>{{pokemon.name}}</p>
+                        <p><small>{{pokemon.created | date:"dd/MM/yyy"}}</small></p>
+                        <span *ngFor="let type of pokemon.types" class="{{ type | pokemonTypeColor}}">
+                           {{type}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<a class="btn-floating btn-large waves-effect waves-light red z-depth-3" style="position: fixed; bottom:25px; right:25px;" routerLink="/pokemon/add">
+    +
+</a>
+<!--input #input (keyup)=" selectPokemon(input.value) " type="number ">
+
+    <p *ngIf="pokemonSelected ">
+        Vous avez selectionné le pokemon: {{pokemonSelected?.name}}
+    </p>
+    <p *ngIf="pokemonSelected ">
+        Aucun pokemon n'a été trouvé. </p>
+    <p *ngFor="let pokemon of pokemonList ">
+        {{pokemon.name}} on les directives d'attribut :permettement de changer le comportemnt d'un element du dom les directives composants :peuvent modifier les elements hmlt les directives structurelles ngif ngfor
+        </p-->

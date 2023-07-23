@@ -1,0 +1,9 @@
+   .ng-valid[required] {
+       border-left: 5px solid #42A948;
+   }
+   /* afficher un bordure verte a gauche si le user saisi donne des éléments valide*/
+   /*on met un bordure rouge si un champ du formulaire est invalid */
+   
+   .ng-Invalid:not(form) {
+       border-left: 5px solid #A94442;
+   }
